@@ -1,54 +1,39 @@
-# Unchain-ETAP
+# 🔓 Unchain-ETAP v1.0
+**Pardus 23 ETAP Kilit Sistemi Özgürleştirme Aracı**
 
-Pardus 23 ETAP yüklü akıllı tahtalar üzerindeki kısıtlayıcı servisleri (eta-kilit, ebaqr, mcnd.service vb.) devre dışı bırakmak ve sistemi özgürleştirmek için geliştirilmiş bir terminal betiğidir.
-## 🚀 Kullanım Rehberi
+Bu araç, Pardus 23 ETAP yüklü akıllı tahtalarda sistem kısıtlamalarını kaldırmak ve tam kontrol sağlamak amacıyla **OBG (Optimizasyon, Bilişim ve Geliştirme)** tarafından geliştirilmiştir.
+## 🚀 Adım 1: Terminale Geçiş ve Giriş
+1. Scripti bir USB belleğe atın ve tahtaya takın.
+2. `CTRL + ALT + F4` tuşlarına basarak **TTY4** moduna girin.
+3. **⚠️ ÖNEMLİ:** TTY ekranında klavye İngilizce (US) düzenindedir. 
+   * `etapadmin` yazarken **"i"** harfi yerine klavyedeki **"ı" (I)** tuşuna basmanız gerekir.
+   * Şifrenizi (`etap+pardus!`) yazarken karakterler ekranda gözükmez, doğru yazıp Enter'a basın.
+## 🛠️ Adım 2: USB'yi Bulma ve Scripti Başlatma
+Sisteme giriş yaptıktan sonra USB belleğinizin yolunu bulmanız gerekir:
 
-Sistemi özgürleştirmek için aşağıdaki adımları sırasıyla ve dikkatle takip edin.
-1. Hazırlık
+1. `lsblk` komutunu yazın ve USB belleğinizin hangi klasöre bağlı (MOUNTPOINT) olduğunu bulun (Örn: `/media/ogretmen/USB_ADI`).
+2. USB dizinine girmek için şu komutu yazın (Kendi yolunuza göre düzenleyin):
+   ```bash
+   cd /media/ogretmen/USB_ADI
+   ```
+Scripti şu komutla ateşleyin:
+   ```bash
+   chmod +x Unchain-ETAP.sh && ./Unchain-ETAP.sh
+   ```
+## Adım 3: Masaüstüne Dönüş
 
-Unchain-ETAP.sh dosyasını bir USB belleğe kopyalayın ve hedef akıllı tahtaya takın.
-2. TTY4 Terminaline Geçiş
+Script "İŞLEM TAMAMLANDI" mesajını verdiğinde her şey yolunda demektir.
 
-Sistemin kısıtlamalarını aşmak için masaüstü arayüzünden çıkıp terminal moduna geçmeniz gerekir. Klavye üzerinden CTRL + ALT + F4 tuş kombinasyonuna basarak TTY4 ekranına giriş yapın.
-3. Giriş (Login) İşlemi
+Görsel arayüze geri dönmek için ALT + F7 tuşlarına basın.
 
-Bu aşamada sistem sizden kullanıcı adı ve şifre isteyecektir.
+---
 
-    [!CAUTION]
-    Önemli Klavye Uyarısı: TTY ekranında klavye düzeni İngilizce olabilir.
+## ⚠️ Sorumluluk Reddi (Disclaimer)
 
-        Kullanıcı Adı: etapadmin yazarken "i" harfi yerine klavyedeki "ı" (I) tuşuna basmanız gerekebilir.
+Bu yazılım, Pardus 23 ETAP sistemlerinde tam kontrol sağlamak ve kısıtlayıcı servisleri devre dışı bırakmak amacıyla geliştirilmiş teknik bir araçtır.
 
-        Şifre: Varsayılan şifre etap+pardus! şeklindedir. Şifreyi yazarken ekranda herhangi bir karakter veya yıldız görünmeyecektir. Bu normal bir güvenlik prosedürüdür, şifreyi yazıp Enter tuşuna basın.
+*   **Kullanım Sorumluluğu:** Bu aracın çalıştırılması sonucu oluşabilecek her türlü idari, disiplin veya teknik sorumluluk tamamen kullanıcıya aittir.
+*   **Garanti Yoktur:** Yazılım "olduğu gibi" sunulur. Sistemde meydana gelebilecek herhangi bir hatadan geliştirici sorumlu tutulamaz.
+*   **Geliştirici Beyanı:** OBG (Optimizasyon, Bilişim ve Geliştirme) kurucusu olarak, yazılımın teknik işleyişi tarafımdan üstlenilmektedir.
 
-4. USB Belleği Tanımlama
-
-USB içerisindeki dosyaya erişmek için önce belleğin sisteme nereye bağlandığını (mount point) bulmalısınız. Terminale şu komutu yazın:
-Bash
-
-lsblk
-
-Çıktıda USB belleğinizi bulun ve MOUNTPOINT sütunundaki yolu not edin.
-(Örn: /media/etapadmin/USB_ADI veya /media/ogretmen/USB_ADI)
-5. Dizine Giriş ve Scripti Çalıştırma
-
-Not ettiğiniz dizine giriş yapın ve scripti yetkilendirerek başlatın:
-Bash
-
-# USB dizinine girin (Kendi yolunuzu yazın)
-cd /media/etapadmin/USB_ADI
-
-# Scripti çalıştırılabilir yapın ve başlatın
-chmod +x Unchain-ETAP.sh && ./Unchain-ETAP.sh
-
-6. İşlemi Tamamlama
-
-Script işlemleri bitirdiğinde sizi bilgilendirecektir. Tekrar grafik arayüzüne (masaüstüne) dönmek için:
-
-    ALT + F7 tuş kombinasyonunu kullanın.
-
-🛡️ Sorumluluk Reddi (Disclaimer)
-
-Bu araç eğitim ve araştırma amaçlı geliştirilmiştir. Kullanımı sırasında oluşabilecek sistem hataları, veri kayıpları veya kurum içi politika ihlallerinden geliştirici (obgcyber) sorumlu tutulamaz. Aracı kullanmadan önce sistem yedeği almanız önerilir. Tüm sorumluluk kullanıcıya aittir.
-
-Developed by obgcyber - GitHub
+---
