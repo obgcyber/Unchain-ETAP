@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script etapadmin olarak çalışmıyorsa etapadmin'e geç
+# Script etapadmin olarak çalışmıyorsa etapadmin'e geçer
 if [ "$(whoami)" != "etapadmin" ]; then
     SIFRE="etap+pardus!"
     echo "$SIFRE" | su - etapadmin -c "bash '$0' --etapadmin"
