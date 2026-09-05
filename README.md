@@ -1,34 +1,30 @@
 # 🔓 Unchain-ETAP v1.0
 
-**Pardus 23 ETAP Sistem Yönetim Aracı**
+**Pardus 23 ETAP Kilit Sistemi Yönetim Aracı**
 
-Bu araç, Pardus 23 ETAP sistemlerinde belirli sistem servisleri üzerinde yönetim işlemleri gerçekleştirmek amacıyla **OBG (Optimizasyon, Bilişim ve Geliştirme)** tarafından geliştirilmiştir.
+Bu araç, Pardus 23 ETAP sistemlerinde sistem servisleri üzerinde yönetim işlemleri gerçekleştirmek amacıyla **OBG (Optimizasyon, Bilişim ve Geliştirme)** tarafından geliştirilmiştir.
 
-## 🚀 Kurulum ve Çalıştırma
+## 🚀 Çalıştırma
 
-1. `Unchain-ETAP.sh` dosyasını USB belleğinize kopyalayın.
-2. USB belleği Pardus 23 ETAP cihazına takın.
-3. Dosyanın bulunduğu klasöre gidin.
-4. Scripti çalıştırılabilir hâle getirin:
+1. `Unchain-ETAP.sh` dosyasını bir USB belleğe kopyalayın.
+2. USB belleği ETAP cihazına takın.
+3. **Dosyalar / Dosya Yöneticisi** uygulamasını açın.
+4. Sol taraftan USB belleğinizi açın.
+5. `Unchain-ETAP.sh` dosyasını bulun.
+6. Dosyaya **sağ tıklayın → Özellikler** seçeneğine girin.
+7. **İzinler** bölümünden dosyanın **çalıştırılmasına izin ver** seçeneğini etkinleştirin.
+8. Pencereyi kapatın.
+9. `Unchain-ETAP.sh` dosyasına **çift tıklayarak** çalıştırın.
+10. Sistem bir onay penceresi gösterirse **Çalıştır** seçeneğini seçin.
 
-```bash
-chmod +x Unchain-ETAP.sh
-```
-
-5. Ardından scripti çalıştırın:
-
-```bash
-./Unchain-ETAP.sh
-```
-
-> **Not:** Scriptin gerçekleştirdiği sistem yönetimi işlemleri için gerekli kullanıcı yetkilerine sahip olmanız gerekir. Yetki gerekiyorsa sistem tarafından istenen kimlik doğrulamasını kullanın.
+> **Not:** İşlem sırasında sistem tarafından yetki veya kimlik doğrulama istenebilir. Bu durumda cihazda yetkili hesabın kimlik doğrulamasını gerçekleştirin.
 
 ## ⚠️ Önemli
 
 * Bu araç yalnızca yetkili olduğunuz sistemlerde kullanılmalıdır.
-* Çalıştırmadan önce önemli verilerinizi yedeklemeniz önerilir.
-* Sistem servislerinde yapılan değişiklikler cihazın normal çalışma düzenini etkileyebilir.
-* Herhangi bir işlem yapmadan önce kurumunuzun veya sistem yöneticinizin kullanım politikalarını kontrol edin.
+* Çalıştırmadan önce önemli verilerin yedeklenmesi önerilir.
+* Sistem servislerinde yapılan değişiklikler cihazın çalışma düzenini etkileyebilir.
+* Kullanım öncesinde kurumunuzun veya sistem yöneticinizin politikalarını kontrol edin.
 
 ## ⚠️ Sorumluluk Reddi
 
@@ -39,4 +35,3 @@ Aracın kullanılmasından kaynaklanabilecek teknik, idari veya diğer sonuçlar
 **OBG (Optimizasyon, Bilişim ve Geliştirme)**
 
 ---
-
