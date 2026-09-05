@@ -1,39 +1,42 @@
 # 🔓 Unchain-ETAP v1.0
-**Pardus 23 ETAP Kilit Sistemi Özgürleştirme Aracı**
 
-Bu araç, Pardus 23 ETAP yüklü akıllı tahtalarda sistem kısıtlamalarını kaldırmak ve tam kontrol sağlamak amacıyla **OBG (Optimizasyon, Bilişim ve Geliştirme)** tarafından geliştirilmiştir.
-## 🚀 Adım 1: Terminale Geçiş ve Giriş
-1. Scripti bir USB belleğe atın ve tahtaya takın.
-2. `CTRL + ALT + F4` tuşlarına basarak **TTY4** moduna girin.
-3. **⚠️ ÖNEMLİ:** TTY ekranında klavye İngilizce (US) düzenindedir. 
-   * `etapadmin` yazarken **"i"** harfi yerine klavyedeki **"ı" (I)** tuşuna basmanız gerekir.
-   * Şifrenizi (`etap+pardus!`) yazarken karakterler ekranda gözükmez, doğru yazıp Enter'a basın.
-## 🛠️ Adım 2: USB'yi Bulma ve Scripti Başlatma
-Sisteme giriş yaptıktan sonra USB belleğinizin yolunu bulmanız gerekir:
+**Pardus 23 ETAP Sistem Yönetim Aracı**
 
-1. `lsblk` komutunu yazın ve USB belleğinizin hangi klasöre bağlı (MOUNTPOINT) olduğunu bulun (Örn: `/media/ogretmen/USB_ADI`).
-2. USB dizinine girmek için şu komutu yazın (Kendi yolunuza göre düzenleyin):
-   ```bash
-   cd /media/ogretmen/USB_ADI
-   ```
-Scripti şu komutla ateşleyin:
-   ```bash
-   chmod +x Unchain-ETAP.sh && ./Unchain-ETAP.sh
-   ```
-## Adım 3: Masaüstüne Dönüş
+Bu araç, Pardus 23 ETAP sistemlerinde belirli sistem servisleri üzerinde yönetim işlemleri gerçekleştirmek amacıyla **OBG (Optimizasyon, Bilişim ve Geliştirme)** tarafından geliştirilmiştir.
 
-Script "İŞLEM TAMAMLANDI" mesajını verdiğinde her şey yolunda demektir.
+## 🚀 Kurulum ve Çalıştırma
 
-Görsel arayüze geri dönmek için ALT + F7 tuşlarına basın.
+1. `Unchain-ETAP.sh` dosyasını USB belleğinize kopyalayın.
+2. USB belleği Pardus 23 ETAP cihazına takın.
+3. Dosyanın bulunduğu klasöre gidin.
+4. Scripti çalıştırılabilir hâle getirin:
+
+```bash
+chmod +x Unchain-ETAP.sh
+```
+
+5. Ardından scripti çalıştırın:
+
+```bash
+./Unchain-ETAP.sh
+```
+
+> **Not:** Scriptin gerçekleştirdiği sistem yönetimi işlemleri için gerekli kullanıcı yetkilerine sahip olmanız gerekir. Yetki gerekiyorsa sistem tarafından istenen kimlik doğrulamasını kullanın.
+
+## ⚠️ Önemli
+
+* Bu araç yalnızca yetkili olduğunuz sistemlerde kullanılmalıdır.
+* Çalıştırmadan önce önemli verilerinizi yedeklemeniz önerilir.
+* Sistem servislerinde yapılan değişiklikler cihazın normal çalışma düzenini etkileyebilir.
+* Herhangi bir işlem yapmadan önce kurumunuzun veya sistem yöneticinizin kullanım politikalarını kontrol edin.
+
+## ⚠️ Sorumluluk Reddi
+
+Yazılım **"olduğu gibi"** sunulmaktadır.
+
+Aracın kullanılmasından kaynaklanabilecek teknik, idari veya diğer sonuçlardan kullanıcı sorumludur. Geliştirici, cihazda veya işletim sisteminde meydana gelebilecek sorunlardan sorumlu tutulamaz.
+
+**OBG (Optimizasyon, Bilişim ve Geliştirme)**
 
 ---
 
-## ⚠️ Sorumluluk Reddi (Disclaimer)
-
-Bu yazılım, Pardus 23 ETAP sistemlerinde tam kontrol sağlamak ve kısıtlayıcı servisleri devre dışı bırakmak amacıyla geliştirilmiş teknik bir araçtır.
-
-*   **Kullanım Sorumluluğu:** Bu aracın çalıştırılması sonucu oluşabilecek her türlü idari, disiplin veya teknik sorumluluk tamamen kullanıcıya aittir.
-*   **Garanti Yoktur:** Yazılım "olduğu gibi" sunulur. Sistemde meydana gelebilecek herhangi bir hatadan geliştirici sorumlu tutulamaz.
-*   **Geliştirici Beyanı:** OBG (Optimizasyon, Bilişim ve Geliştirme) kurucusu olarak, yazılımın teknik işleyişi tarafımdan üstlenilmektedir.
-
----
